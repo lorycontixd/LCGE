@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Lorenzo\Documents\programming\projects\LCGE\Includes;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Lorenzo\Documents\programming\projects\LCGE\Libraries;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\lconti\Documents\programming\lore\LCGE\Includes;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\lconti\Documents\programming\lore\LCGE\Libraries;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -81,6 +81,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Lorenzo\Documents\programming\projects\LCGE\packages\glm-1.0.1;C:\Users\Lorenzo\Documents\programming\projects\LCGE\packages\glfw-3.4.bin.WIN64\include;C:\Users\Lorenzo\Documents\programming\projects\LCGE\packages\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -98,6 +99,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Lorenzo\Documents\programming\projects\LCGE\packages\glm-1.0.1;C:\Users\Lorenzo\Documents\programming\projects\LCGE\packages\glfw-3.4.bin.WIN64\include;C:\Users\Lorenzo\Documents\programming\projects\LCGE\packages\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -112,14 +114,15 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Lorenzo\Documents\programming\projects\LCGE\packages\glm-1.0.1;C:\Users\Lorenzo\Documents\programming\projects\LCGE\packages\glfw-3.4.bin.WIN64\include;C:\Users\Lorenzo\Documents\programming\projects\LCGE\packages\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Lorenzo\Documents\programming\projects\LCGE\Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\lconti\Documents\programming\lore\LCGE\Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -132,6 +135,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Lorenzo\Documents\programming\projects\LCGE\packages\glm-1.0.1;C:\Users\Lorenzo\Documents\programming\projects\LCGE\packages\glfw-3.4.bin.WIN64\include;C:\Users\Lorenzo\Documents\programming\projects\LCGE\packages\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,6 +149,23 @@
   <ItemGroup>
     <ClCompile Include="glad.c" />
     <ClCompile Include="LCGE.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.hpp" />
+    <ClInclude Include="Exceptions.hpp" />
+    <ClInclude Include="LCGE.hpp" />
+    <ClInclude Include="Light.hpp" />
+    <ClInclude Include="Mesh.hpp" />
+    <ClInclude Include="Renderer.hpp" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Shader.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LCGE.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\shaders\refraction.frag" />
+    <None Include="assets\shaders\refraction.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

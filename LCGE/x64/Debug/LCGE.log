@@ -1,2 +1,8 @@
 ﻿  LCGE.cpp
-  LCGE.vcxproj -> C:\Users\Lorenzo\Documents\programming\projects\LCGE\x64\Debug\LCGE.exe
+C:\Users\lconti\Documents\programming\lore\LCGE\LCGE.hpp(30,19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  (compiling source file 'LCGE.cpp')
+  
+C:\Users\lconti\Documents\programming\lore\LCGE\LCGE.hpp(31,20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  (compiling source file 'LCGE.cpp')
+  
+  LCGE.vcxproj -> C:\Users\lconti\Documents\programming\lore\LCGE\x64\Debug\LCGE.exe
